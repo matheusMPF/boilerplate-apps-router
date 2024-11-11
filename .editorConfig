@@ -1,0 +1,12 @@
+# EditorConfig is awesome: https://editorconfig.org
+
+root = true
+
+# All folders starts with this configuration
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf #lf how end line
+charset = utf-8
+trim_trailing_whitespace= true
+insert_final_newline= true
