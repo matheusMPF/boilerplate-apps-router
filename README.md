@@ -34,3 +34,14 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Configuration Testing Library
+
+<!-- Docs: https://testing-library.com/docs/react-testing-library/example-intro -->
+
+Passo a passo da configuração do Testing Library
+
+Etapa 1. Instale a lib em seu projetoto, com os seguintes comandos: npm i @testing-library/react @testing-library/jest-dom @testing-library/user-event
+Etapa 2. Se não existir uma pasta ".jest" na raiz do seu projeto, crie uma. Caso tenha, pule para a etapa 4
+Etapa 3. Dentro da pasta .jest, você deve criar uma arquivo setup.ts
+Etapa 4. Dentro da psta de setup.ts você deve importar o testing library: import '@testing-library/'.
