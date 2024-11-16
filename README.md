@@ -109,3 +109,7 @@ Etapa 1. Instale a lib em seu projetoto, com os seguintes comandos: npm i @testi
 Etapa 2. Se não existir uma pasta ".jest" na raiz do seu projeto, crie uma. Caso tenha, pule para a etapa 4
 Etapa 3. Dentro da pasta .jest, você deve criar uma arquivo setup.ts
 Etapa 4. Dentro da psta de setup.ts você deve importar o testing library: import '@testing-library/'.
+
+## Comands Git
+
+- git commit -m "description" --no-verify -> Para ignorar os teste ao fazer o commit (Não recomendado)
