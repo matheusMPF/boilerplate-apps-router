@@ -35,9 +35,73 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
+## Configuration Editor config
+
+<!-- Documentation: https://editorconfig.org -->
+
+Passo a passo da configuração do Editor Config
+
+Etapa 1. Crie um .editorConfig na raiz do projeto
+Etapa 2. Passe as configurações de formatação desejadas -> Ler documentação
+
+## Configuration ESlint
+
+<!-- Documentation: https://eslint.org -->
+
+Etapa 1. Rode este comando em seu projeto: npm init @eslint/config@latest
+Etapa 2. Por padrão, o next já traz um arquivo .eslint, porém, podemos configurar com nossa escolha -> Ler Documentação
+Etapa 3. Instale a extensão no vsCode Eslint
+
+## Configurtion Prettier with ESlint
+
+<!-- Documentation: https://prettier.io -->
+
+Etapa 1. Rode este comando em seu projeto: npm install --save-dev --save-exact prettier
+Etapa 2. Um arquivo .prettirrc será criado na raiz, agora é só adicionar os padrões desejados
+Etapa 3. Criar o arquivo .prettierignore
+Etapa 4. Adicionar os aquirvos que deseja serem ignorados pelo prettier
+Etapa 5. Baixar a extensão do prettier
+Etapa 6. Criar uma pasta .vscode
+Etapa 7. Criar um arquivo settings.json
+Etapa 8. Dentro da pasta, colocar esse comando dento de um json: "editor.formatOnSave": true. Para que sempre que salvar o arquivo ele rode o prettier e formate, antes de salvar
+Etapa 9. Rodar esse comando no projeto: npm install --save-dev eslint-config-prettier. Esse comando evita conflitos do ESlint com o prettier
+Etapa 10. No arquivo .eslintrc, em extends você deve adicionar o "prettier"
+
+## Configurando git hooks
+
+<!-- Documentation (Prettier): https://prettier.io/docs/en/install.html#git-hooks -->
+<!-- Documentation: (husky): https://typicode.github.io/husky/get-started.html -->
+
+Bloqueia os commits se existirem algum erro
+
+Etapa 1. Rode este comando no projeto: npm install --save-dev husky lint-staged
+Etapa 2. Em seguida usaremos a documentação do husky, e rodaremos este coamndo: npm install --save-dev husky
+Etapa 3. Agora rodaremos este comando que criará uma pasta .husky: npx husky init
+Etapa 4. Dentro de .husky deve existir um arquivo pre-commit devemos apagar o que tiver dentro dele e adicionar este comando: npx --no-install lint-staged -> Fará com que rode o lint-staged sem fazer a instalação dele, para verificar o que desejar-mos
+Etapa 5. Criar um arquivo na raiz, chamado: .lintstagedrc.js
+Etapa 6. Usar alguma configurações (Estão salvas neste projeto) -> Isso fará com que os comando prettier --write e npm run lint --fix . rodem em cima de todos os arquivos do projeto
+
+## Configuration jest for test
+
+<!-- Documentation: https://jestjs.io/docs/getting-started -->
+
+Etapa 1. Rode este comando para instalar o jest: npm install --save-dev jest
+Etapa 2. Rode este comando: npm install --save-dev @types/jest -> este comando evitará de ter a necessidade de ficar importando coisas do jest
+Etapa 3. npm install jest-environment-
+Etapa 4. Criar um arquivo jest.config.js
+Etapa 5. Passar as configurações desejadas ao rodar os testes unitários
+Etapa 6. Passar no package.json, em scripts os seguintes comandos
+6.1. "test": "jest --maxWorkers=50%", -> isso faz com que o teste de performace rode mais rápido do que usar apenas o "jest"
+6.2. "test:watch": "jest --watch --maxWorkers=25%", -> Faz o mesmo que o de comando acima, porém comm um watch.
+6.3. "test:ci": "jest --runInBand" -> Comando a ser usado no ci, pensando em questões de performance
+Etapa 7. Criar uma pasta .jest (Se não já estiver criado)
+Etapa 8. Criar arquivo setup.ts dentro de .jest
+Etapa 9. Usar estes comando dentro do arquivo import '@testing-library/'
+Etapa 10: Se estiver usando TS, será necessário adicionar o .jest/setup.ts no include do arquivo tsconfig.json
+
 ## Configuration Testing Library
 
-<!-- Docs: https://testing-library.com/docs/react-testing-library/example-intro -->
+<!-- Documentation: https://testing-library.com/docs/react-testing-library/example-intro -->
 
 Passo a passo da configuração do Testing Library
 
