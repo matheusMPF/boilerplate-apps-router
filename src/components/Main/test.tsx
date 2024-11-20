@@ -10,7 +10,7 @@ describe('<Main />', () => {
       screen.getByRole('heading', { name: /Hello world/i })
     ).toBeInTheDocument()
 
-    //Gerar snapshot -> gera capturas de tela de componentes e as compara pixel a pixel
+    //Gerar snapshot -> gera uma pasta snapshot na raiz do teste. Apenas se quisermos uma estrutura muito especifica
     expect(container.firstChild).toMatchSnapshot()
   })
 })
