@@ -13,4 +13,11 @@ describe('<Main />', () => {
     //Gerar snapshot -> gera uma pasta snapshot na raiz do teste. Apenas se quisermos uma estrutura muito especifica
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it('should render the colors correctly', () => {
+    // renderiza o component
+    const { container } = render(<Main />)
+    // verifica se o background-color está correto
+    expect(container.firstChild).toHaveStyle({ 'background-color': '#06092b' })
+  })
 })

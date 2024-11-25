@@ -113,3 +113,10 @@ Etapa 4. Dentro da psta de setup.ts você deve importar o testing library: impor
 ## Comands Git
 
 - git commit -m "description" --no-verify -> Para ignorar os teste ao fazer o commit (Não recomendado)
+
+## Jest-Styled-Components
+
+Etapa 1. Rodar este comando
+Etapa 2 Criar pasta types dentro de src
+Etapa 3. Criar dentro de types o arquivo jest-styled-components.d.ts
+Etapa 4. Usar configuraç~oes desejadas
