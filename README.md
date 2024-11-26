@@ -116,7 +116,9 @@ Etapa 4. Dentro da psta de setup.ts você deve importar o testing library: impor
 
 ## Jest-Styled-Components
 
-Etapa 1. Rodar este comando
+<!-- Documentation: https://github.com/styled-components/jest-styled-components -->
+
+Etapa 1. Rodar este comando: npm install --save-dev jest-styled-components
 Etapa 2 Criar pasta types dentro de src
 Etapa 3. Criar dentro de types o arquivo jest-styled-components.d.ts
 Etapa 4. Usar configuraç~oes desejadas
