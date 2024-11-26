@@ -122,3 +122,12 @@ Etapa 1. Rodar este comando: npm install --save-dev jest-styled-components
 Etapa 2 Criar pasta types dentro de src
 Etapa 3. Criar dentro de types o arquivo jest-styled-components.d.ts
 Etapa 4. Usar configuraç~oes desejadas
+
+## Storybook
+
+<!-- https://storybook.js.org -->
+
+Etapa 1. Rodar este comando: npx storybook@latest init
+Etapa 2. Uma pasta "stories" será criada na raiz do seu projeto, veja a necessidade, se não houver pode remove-lá
+Etapa 3. Crie na raiz do seu projeto (Se não houver) o arquivo ".eslintignore" e passe alguns arquivos para o eslint ignorar
+Etapa 4. Configurar o arquivo main da pasta .storybook
